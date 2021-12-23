@@ -1,16 +1,60 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.scrollbar::-webkit-scrollbar {
+    width: 5px;
 }
 
-* {
-  box-sizing: border-box;
+
+.scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    /*border: 3px solid var(--scrollbarBG);*/
+}
+
+@font-face {
+    font-family: "Whitney";
+    src: url("/@fonts/whitney/whitney-light.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Whitney";
+    src: url("/@fonts/whitney/whitney-book.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Whitney";
+    src: url("/@fonts/whitney/whitney-medium.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Whitney";
+    src: url("/@fonts/whitney/whitney-semibold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Ginto";
+    src: url("/@fonts/ginto/ginto-semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
 }
